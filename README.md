@@ -152,8 +152,6 @@ GitHub: [https://github.com/mkane00](https://github.com/mkane00)
 
 *Add your Tableau Public dashboard link here after publishing.*
 
-Example:
+https://public.tableau.com/views/PaysimDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
-```text
-https://public.tableau.com/views/YourDashboardName
 ```
