@@ -96,7 +96,7 @@ This creates a focused review queue that helps fraud analysts prioritize suspici
 
 ## Dashboard Preview
 
-![Dashboard Preview](Final PaySim Dashboard.png)
+![Dashboard Preview](Final%20PaySim%20Dashboard.png)
 
 ---
 
@@ -110,25 +110,23 @@ This creates a focused review queue that helps fraud analysts prioritize suspici
 * Fraud Analytics
 
 ---
+## Repository Structure
 
-PaySim-Fraud-Risk-Analysis/
+```text
+paysim-fraud-risk-analysis/
 │
 ├── README.md
-│
-├── data/
-│   └── paysim_sample.csv
-│
 ├── notebooks/
 │   ├── Bronze_Layer_Data_Ingestion.ipynb
 │   ├── Silver_Layer_Data_Cleaning_Features.ipynb
-│   ├── Gold_Layer_Fraud_Analytics.ipynb
+│   └── Gold_Layer_Fraud_Analytics.ipynb
+│
+├── images/
+│   └── final_paysim_dashboard.png
 │
 ├── dashboard/
 │   ├── paysim_dashboard.twbx
 │   └── tableau_public_link.txt
-│
-├── images/
-│   └── final_paysim_dashboard.png
 │
 ├── outputs/
 │   ├── fraud_summary.csv
@@ -136,8 +134,7 @@ PaySim-Fraud-Risk-Analysis/
 │   └── gold_reporting.csv
 │
 └── requirements.txt
-
-
+```
 
 ## Author
 
@@ -147,11 +144,10 @@ Fraud Analytics | Data Analytics | Tableau | Python | SQL
 GitHub: [https://github.com/mkane00](https://github.com/mkane00)
 
 ---
-
 ## Tableau Dashboard
 
-*Add your Tableau Public dashboard link here after publishing.*
+View the interactive dashboard on Tableau Public:
 
-https://public.tableau.com/views/PaysimDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+[PaySim Fraud Detection Dashboard](https://public.tableau.com/views/PaysimDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ```
