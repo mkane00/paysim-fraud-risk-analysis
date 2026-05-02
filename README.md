@@ -101,7 +101,7 @@ This creates a focused review queue that helps fraud analysts prioritize suspici
 Example:
 
 ```markdown
-![Dashboard Preview](03_visualizations/final_paysim_dashboard.png)```
+![Dashboard Preview](Final PaySim Dashboard.png)```
 
 ---
 
