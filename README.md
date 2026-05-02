@@ -96,12 +96,7 @@ This creates a focused review queue that helps fraud analysts prioritize suspici
 
 ## Dashboard Preview
 
-*Add your dashboard screenshot here.*
-
-Example:
-
-```markdown
-![Dashboard Preview](Final PaySim Dashboard.png)```
+![Dashboard Preview](Final PaySim Dashboard.png)
 
 ---
 
