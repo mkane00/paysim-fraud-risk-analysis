@@ -111,6 +111,34 @@ This creates a focused review queue that helps fraud analysts prioritize suspici
 
 ---
 
+PaySim-Fraud-Risk-Analysis/
+│
+├── README.md
+│
+├── data/
+│   └── paysim_sample.csv
+│
+├── notebooks/
+│   ├── Bronze_Layer_Data_Ingestion.ipynb
+│   ├── Silver_Layer_Data_Cleaning_Features.ipynb
+│   ├── Gold_Layer_Fraud_Analytics.ipynb
+│
+├── dashboard/
+│   ├── paysim_dashboard.twbx
+│   └── tableau_public_link.txt
+│
+├── images/
+│   └── final_paysim_dashboard.png
+│
+├── outputs/
+│   ├── fraud_summary.csv
+│   ├── high_risk_queue.csv
+│   └── gold_reporting.csv
+│
+└── requirements.txt
+
+
+
 ## Author
 
 **Mary Kane**
