@@ -1,5 +1,9 @@
 # paysim-fraud-risk-analysis
-Fraud analysts need to identify suspicious transactions efficiently while minimizing investigation workload.
+
+Fraud detection in financial transactions is challenging due to the extremely low rate of fraudulent activity and the need to identify high-risk patterns without overwhelming review teams.
+
+In this project, I designed a fraud risk analysis framework using the PaySim dataset to identify suspicious transaction patterns and create a high-risk review queue that could support operational decision-making.
+
 # PaySim Fraud Risk Analysis Dashboard
 
 ## Project Overview
