@@ -114,26 +114,10 @@ This creates a focused review queue that helps fraud analysts prioritize suspici
 
 ```text
 paysim-fraud-risk-analysis/
-│
-├── README.md
-├── notebooks/
-│   ├── Bronze_Layer_Data_Ingestion.ipynb
-│   ├── Silver_Layer_Data_Cleaning_Features.ipynb
-│   └── Gold_Layer_Fraud_Analytics.ipynb
-│
-├── images/
-│   └── final_paysim_dashboard.png
-│
-├── dashboard/
-│   ├── paysim_dashboard.twbx
-│   └── tableau_public_link.txt
-│
-├── outputs/
-│   ├── fraud_summary.csv
-│   ├── high_risk_queue.csv
-│   └── gold_reporting.csv
-│
-└── requirements.txt
+├── notebooks/        # Bronze, Silver, Gold analysis
+├── dashboard/        # Tableau workbook
+├── outputs/          # Fraud datasets for analysis
+└── README.md
 ```
 
 ## Author
@@ -150,5 +134,4 @@ View the interactive dashboard on Tableau Public:
 
 [PaySim Fraud Detection Dashboard](https://public.tableau.com/app/profile/mary.kane/viz/PaysimDashboard/Dashboard1)
 
-[PaySim Fraud Detection Dashboard]
 ```
