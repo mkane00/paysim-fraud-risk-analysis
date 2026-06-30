@@ -129,7 +129,7 @@ paysim-fraud-risk-analysis/
 **Mary Kane**
 Fraud Analytics | Data Analytics | Tableau | Python | SQL
 
-GitHub: [https://github.com/mkane00](https://github.com/mkane00)
+GitHub: [[https://github.com/mkane00](https://github.com/mkane00)](https://github.com/mkane00)
 
 ---
 ## Tableau Dashboard
