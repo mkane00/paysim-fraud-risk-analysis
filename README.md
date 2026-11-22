@@ -21,6 +21,15 @@ The project compares two screening strategies to understand how financial instit
 - Data Cleaning and Validation
 - KPI Analysis and Data Visualization
 
+## Executive Dashboard
+
+![PaySim 2.0 Fraud Risk Analysis Dashboard](outputs/PaySim%20Fraud%20Risk%20Analysis%20Dashboard.png)
+
+### Key Findings
+
+Strategy B reduced investigation workload by **30.18% (836,112 fewer transactions)** while maintaining **99.39% financial risk coverage**. However, it missed **1,707 fraudulent transactions**, representing approximately **$73.02 million in simulated transaction value**. These results highlight the trade-off between fraud detection and operational efficiency.
+
+**AI Assistance Disclosure:** AI tools, including ChatGPT, were used to assist with dashboard design, documentation, and presentation of findings. The analytical metrics were calculated using Python and checked against the PaySim dataset. The dashboard summarizes simulated financial transactions, not actual financial losses.
 ## Methodology — Bronze, Silver & Gold
 
 ### Bronze — Data Exploration
