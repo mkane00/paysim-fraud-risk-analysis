@@ -1,141 +1,120 @@
-# paysim-fraud-risk-analysis
-
-Fraud detection in financial transactions is challenging due to the extremely low rate of fraudulent activity and the need to identify high-risk patterns without overwhelming review teams.
-
-In this project, I designed a fraud risk analysis framework using the PaySim dataset to identify suspicious transaction patterns and create a high-risk review queue that could support operational decision-making.
-
-# PaySim Fraud Risk Analysis Dashboard
+# PaySim 2.0 — Fraud Risk Analysis
 
 ## Project Overview
 
-This project analyzes synthetic financial transaction data to identify fraud patterns, prioritize high-risk transactions, and validate fraud detection logic.
+This project analyzes 6,362,620 simulated financial transactions to identify fraud patterns and evaluate the effectiveness of fraud screening strategies.
 
-The workflow follows a layered analytics approach:
+The analysis follows a Bronze–Silver–Gold workflow, using Python to transform transaction data into actionable business insights.
 
-* **Bronze Layer** → Raw transaction ingestion
-* **Silver Layer** → Data cleaning, validation, and feature engineering
-* **Gold Layer** → Business-ready fraud metrics and dashboard reporting
+## Business Objective
 
-Built using:
+Evaluate the trade-offs between fraud detection, financial risk coverage, and investigation workload.
 
-* Python
-* Pandas
-* Tableau
-* Fraud Signal Engineering
-* Risk Segmentation
+The project compares two screening strategies to understand how financial institutions can prioritize suspicious transactions while managing operational efficiency.
 
----
+## Tools & Technologies
 
-## Business Problem
+- Python
+- pandas
+- Matplotlib
+- JupyterLab
+- Data Cleaning and Validation
+- KPI Analysis and Data Visualization
 
-Fraud analysts need to identify suspicious transactions efficiently while minimizing investigation workload.
+## Executive Dashboard
 
-This dashboard helps answer:
+![PaySim 2.0 Fraud Risk Analysis Dashboard](outputs/PaySim%20Fraud%20Risk%20Analysis%20Dashboard.png)
 
-* Where fraud concentrates
-* Which transactions are highest risk
-* Whether detection rules are effective
-* How transaction amount influences fraud
+### Key Findings
 
----
+Strategy B reduced investigation workload by **30.18% (836,112 fewer transactions)** while maintaining **99.39% financial risk coverage**. However, it missed **1,707 fraudulent transactions**, representing approximately **$73.02 million in simulated transaction value**. These results highlight the trade-off between fraud detection and operational efficiency.
 
-## Dataset
+**AI Assistance Disclosure:** AI tools, including ChatGPT, were used to assist with dashboard design, documentation, and presentation of findings. The analytical metrics were calculated using Python and checked against the PaySim dataset. The dashboard summarizes simulated financial transactions, not actual financial losses.
+## Methodology — Bronze, Silver & Gold
 
-**PaySim** is a synthetic mobile money transaction dataset used to simulate fraud detection scenarios.
+### Bronze — Data Exploration
+- Explored 6,362,620 transactions.
+- Reviewed data types and transaction categories.
+- Checked for missing values and duplicate records.
+- Identified the initial distribution of fraudulent transactions.
 
-Dataset includes:
+### Silver — Data Preparation
+- Validated data quality.
+- Created risk indicators based on transaction type and amount.
+- Prepared the dataset for fraud risk analysis.
 
-* Transaction Type
-* Transaction Amount
-* Account Balance Changes
-* Fraud Labels (`isFraud`)
-* Balance Mismatch Signals
-* Transaction Risk Indicators
-
----
-
-## Key Metrics
-
-* **Total Transactions:** 6.36M
-* **Fraud Transactions:** 8,213
-* **Fraud Rate:** 0.13%
-* **Priority Review Queue:** 318,131
-
----
-
-## Dashboard Features
-
-* Fraud Count by Transaction Type
-* Fraud Rate by Transaction Type
-* Fraud Count by Amount Bucket
-* Fraud Signal Distribution
-* Flagged vs Non-Flagged Fraud Comparison
-* Interactive Filters
-
----
-
-## Fraud Logic
-
-The **Priority Review Queue** identifies transactions matching both conditions:
-
-```text
-Large Transaction Flag = TRUE
-AND
-Destination Balance Mismatch = TRUE
-```
-
-This creates a focused review queue that helps fraud analysts prioritize suspicious activity.
-
----
+### Gold — Risk Analysis
+- Calculated six fraud detection and operational KPIs.
+- Compared two transaction screening strategies.
+- Evaluated precision, recall, investigation workload, and financial risk coverage.
+- Created four visualizations and developed business recommendations.
 
 ## Key Findings
 
-* Fraud is concentrated in **CASH_OUT** and **TRANSFER** transactions
-* Fraud rates increase with larger transaction values
-* Flagged transactions show significantly higher fraud prevalence
-* Fraud signal scores cluster in mid-range groups, while high-risk scores occur less frequently
-* Priority Review Queue helps isolate transactions that warrant investigation
+The analysis identified 8,213 fraudulent transactions out of 6,362,620 total transactions, representing an overall fraud rate of 0.129%.
 
----
+### Fraud Patterns
 
-## Dashboard Preview
+- TRANSFER had the highest fraud rate (0.77%).
+- CASH_OUT had a fraud rate of 0.18%.
+- No fraudulent transactions were recorded in the remaining transaction categories.
 
-![Dashboard Preview](final_paysim_dashboard.png)
+### Screening Strategy Comparison
 
----
+| Metric | Strategy A | Strategy B |
+|---|---:|---:|
+| Transactions Flagged | 2,770,409 | 1,934,297 |
+| Fraud Recall | 100% | 79.22% |
+| Precision | 0.296% | 0.336% |
+| Financial Risk Coverage | 100% | 99.39% |
+| Missed Fraudulent Transactions | 0 | 1,707 |
 
-## Tools Used
+Strategy B reduced investigation workload by **30.18%**, equivalent to 836,112 fewer flagged transactions.
 
-* Python
-* Pandas
-* Tableau
-* Jupyter Notebook
-* Data Visualization
-* Fraud Analytics
+However, Strategy B missed 1,707 fraudulent transactions representing approximately 73.02 million in simulated transaction value.
 
----
-## Repository Structure
+### Business Insight
 
-```text
-paysim-fraud-risk-analysis/
-├── notebooks/        # Bronze, Silver, Gold analysis
-├── dashboard/        # Tableau workbook
-├── outputs/          # Fraud datasets for analysis
-└── README.md
-```
+The results highlight the trade-off between fraud detection and operational efficiency.
 
-## Author
+Strategy A provides complete detection coverage within this dataset but requires substantially more investigations.
 
-**Mary Kane**
-Fraud Analytics | Data Analytics | Tableau | Python | SQL
+Strategy B reduces investigation workload while maintaining high financial risk coverage, although its lower recall and very low precision indicate opportunities for improvement.
 
-GitHub: [[https://github.com/mkane00](https://github.com/mkane00)](https://github.com/mkane00)
+## Business Recommendations
 
----
-## Tableau Dashboard
+Based on the analysis, the following actions are recommended:
 
-View the interactive dashboard on Tableau Public:
+1. **Improve fraud screening precision:** Explore additional transaction characteristics to reduce false positives and unnecessary investigations.
+2. **Balance detection and efficiency:** Evaluate screening strategies using both fraud recall and investigation workload.
+3. **Monitor financial exposure:** Track the monetary value of detected and missed fraudulent transactions.
+4. **Validate screening rules:** Test alternative thresholds and strategies before operational deployment.
 
-[PaySim Fraud Detection Dashboard](https://public.tableau.com/app/profile/mary.kane/viz/PaysimDashboard/Dashboard1)
+## Project Structure
 
-```
+The project is organized into three analytical stages:
+
+- **Bronze:** Initial data exploration and quality assessment.
+- **Silver:** Data preparation and risk indicator development.
+- **Gold:** Fraud detection KPIs, strategy comparison, visualizations, and business recommendations.
+
+### Jupyter Notebooks
+
+The following notebooks document the analytical workflow:
+
+- [Bronze — Data Exploration](notebooks/01_Bronze_Data_Exploration.ipynb)
+- [Silver — Data Preparation](notebooks/02_Silver_Data_Preparation.ipynb)
+- [Gold — Risk Analysis](notebooks/03_Gold_Risk_Analysis.ipynb)
+
+## Limitations
+
+This analysis uses the PaySim simulated financial transaction dataset. Transaction amounts do not represent confirmed financial losses.
+
+The screening strategies were evaluated on the analyzed dataset and require additional validation before real-world implementation.
+
+## Project Status
+
+**PaySim 2.0 — Analysis completed.**
+
+All three analytical stages have been completed, and the notebooks have been validated for successful execution.
+
